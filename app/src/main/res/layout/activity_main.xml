@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:text="Timer"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/img"
+        android:src="@drawable/timer"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toEndOf="@id/tv_timer"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00.00"
+        android:layout_marginBottom="80dp"
+        android:textColor="@color/black"
+        android:textSize="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="50dp"
+        android:text="분"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_minute"
+        app:layout_constraintEnd_toStartOf="@id/tv_second"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_main" />
+    <TextView
+        android:id="@+id/tv_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="50dp"
+        android:text="초"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_minute"
+        app:layout_constraintTop_toBottomOf="@id/tv_main" />
+
+    <EditText
+        android:id="@+id/et_minute"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginBottom="30dp"
+        android:inputType="number"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_minute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/et_dot"
+        app:layout_constraintBottom_toTopOf="@id/btn_start"/>
+    <TextView
+        android:id="@+id/et_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textSize="40dp"
+        android:text=":"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_minute"
+        app:layout_constraintStart_toEndOf="@id/et_minute"
+        app:layout_constraintEnd_toStartOf="@id/et_second"
+        app:layout_constraintBottom_toTopOf="@id/btn_start"/>
+    <EditText
+        android:id="@+id/et_second"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="30dp"
+        android:inputType="number"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_second"
+        app:layout_constraintStart_toEndOf="@id/et_dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_start"/>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#444444"
+        android:text="시작"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tv_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
